@@ -18,7 +18,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '20'
 
     - name: Install Dependencies
       run: npm install
@@ -31,9 +31,6 @@ jobs:
 
     - name: Add Android Platform
       run: npx cap add android
-
-    - name: Generate App Icons
-      run: npx @capacitor/assets generate --android
 
     - name: Sync Capacitor
       run: npx cap sync android
