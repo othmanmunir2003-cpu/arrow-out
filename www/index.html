@@ -65,11 +65,11 @@ body {
   gap: 14px;
   overflow-x: hidden;
 }
-.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .brand { font-family: var(--font-display); font-weight: 700; font-size: 26px; letter-spacing: .04em; text-transform: uppercase; line-height: 1; direction: ltr; }
-.hearts { display: flex; gap: 4px; direction: ltr; }
+.hearts { display: flex; gap: 3px; direction: ltr; }
 .hearts svg { width: 24px; height: 24px; fill: var(--heart); transition: opacity .2s, transform .2s; }
-.hearts svg.lost { opacity: .22; transform: scale(.82); }
+.hearts svg.lost { opacity: .4; transform: scale(.82); }
 
 .meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .level { font-weight: 700; font-size: 20px; }
@@ -225,7 +225,7 @@ body[data-board="volcano"] .arr { filter: drop-shadow(0 0 .08px currentColor); }
 .tstate.own { color: var(--accent); font-weight: 700; }
 
 
-.hud { display: flex; align-items: center; gap: 10px; }
+.hud { display: flex; align-items: center; gap: 6px; }
 .prog { height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
 .prog i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: inherit; transition: width .3s ease; }
 .particle { position: absolute; width: 7px; height: 7px; border-radius: 50%; pointer-events: none; z-index: 30; }
@@ -800,7 +800,7 @@ body[data-board="volcano"] .arr { filter: drop-shadow(0 0 .08px currentColor); }
 
   function lose() {
     var actions = [];
-    function revive() { state.lifeBought = true; state.lives = 2; state.over = false; renderHearts(); }
+    function revive() { state.lifeBought = true; state.lives = 3; state.over = false; renderHearts(); }
     function viaAd() { showAd('reward', revive); }
     if (!state.lifeBought) {
       if (state.coins >= LIFE_COST) {
