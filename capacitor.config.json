@@ -1,0 +1,8 @@
+{
+  "appId": "com.example.arrowout",
+  "appName": "Arrow Out",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
